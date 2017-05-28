@@ -1,6 +1,6 @@
 <template>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
+	<nav class="navbar navbar-static-top">
+		<div class="container-fluid" style="border-bottom: 1px solid #e0e0eb;">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
@@ -12,7 +12,7 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><router-link to="/">Home</router-link></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 					<li class="dropdown">
@@ -31,7 +31,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
 					<li><a href="../navbar-static-top/">Static top</a></li>
-					<li><a href="../navbar-fixed-top/">Fixed top</a></li>
+					<li><router-link to="/foo">Go to Foo</router-link></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
