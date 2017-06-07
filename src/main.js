@@ -4,19 +4,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-import Foo from './components/Foo.vue'
-import Principal from './components/Principal.vue'
+import routes from './routes'
 
 Vue.use(VueRouter)
 
+const router = new VueRouter({routes})
 
-const router = new VueRouter({
-	mode: 'history',
-	routes: [
-		{ path: '/', component: Principal },
-		{ path: '/foo', component: Foo }
-	]
-})
+// router.beforeEach((to, from, next) => {
+// 	console.log("to")
+// 	console.log(to)
+// 	console.log("from")
+// 	console.log(from)
+// 	next()
+// })
 
 new Vue({ // eslint-disable-line no-new
 	router,

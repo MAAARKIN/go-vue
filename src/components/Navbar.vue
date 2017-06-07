@@ -28,8 +28,9 @@
 						</ul>
 					</li>
 				</ul>
+				<login></login>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+					<li class="active"><router-link to="/">Default</router-link></li>
 					<li><a href="../navbar-static-top/">Static top</a></li>
 					<li><router-link to="/foo">Go to Foo</router-link></li>
 				</ul>
@@ -41,5 +42,12 @@
 </template>
 
 <script>
+	import Login from './auth/Login.vue'
 	
+	export default {
+		name: 'app',
+		components: {
+			Login
+		}
+	}
 </script>

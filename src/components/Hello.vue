@@ -18,22 +18,23 @@
 </template>
 
 <script>
-import {HTTP} from '../helpers/http-common'
+	import {HTTP} from '../helpers/http-common'
 
-export default {
-	name: 'hello',
-	data () {
-		return {
-			meuObj: {
-				teste: 'teste'
-			},
-			msg: 'Welcome to Go-Vue.js App'
-		}
-	},
-	methods: {
-		greeting: function(event) {
+	export default {
+		name: 'hello',
+		data () {
+			return {
+				meuObj: {
+					teste: 'teste'
+				},
+				msg: 'Welcome to Go-Vue.js App'
+			}
+		},
+		methods: {
+			greeting: function(event) {
 			// alert('Do something')
 			this.meuObj.teste = ''
+
 			HTTP.get('/')
 			.then(response => {
 				console.log(response)
@@ -47,30 +48,30 @@ export default {
 </script>
 
 <style scoped>
-#hello {
-	font-family: 'Avenir', Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
-	margin-top: 60px;
-}
+	#hello {
+		font-family: 'Avenir', Helvetica, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-align: center;
+		color: #2c3e50;
+		margin-top: 60px;
+	}
 
-h1, h2 {
-	font-weight: normal;
-}
+	h1, h2 {
+		font-weight: normal;
+	}
 
-ul {
-	list-style-type: none;
-	padding: 0;
-}
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
 
-li {
-	display: inline-block;
-	margin: 0 10px;
-}
+	li {
+		display: inline-block;
+		margin: 0 10px;
+	}
 
-a {
-	color: #42b983;
-}
+	a {
+		color: #42b983;
+	}
 </style>
